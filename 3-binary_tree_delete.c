@@ -1,4 +1,4 @@
-#include <binary_tree.h>
+#include "binary_trees.h"
 
 /**
 * binary_tree_delete - Deletes all the nodes in the binary tree
@@ -11,7 +11,7 @@
 void binary_tree_delete(binary_tree_t *tree)
 {
 	if (tree == NULL)
-		return NULL
+		return;
 
 	binary_tree_delete(tree->left);
 	binary_tree_delete(tree->right);
