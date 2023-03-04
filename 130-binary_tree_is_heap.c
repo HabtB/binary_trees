@@ -1,21 +1,6 @@
 #include "binary_trees.h"
 
 /**
- * binary_tree_is_heap - checks if a binary tree is a valid Max Binary Heap
- * @tree: a pointer to the root node of the tree to check
- *
- * Return: 1 if tree is a valid Max Binary Heap
- *         0 if tree is NULL
- *         0 otherwise
- */
-int binary_tree_is_heap(const binary_tree_t *tree)
-{
-	if (!tree)
-		return (0);
-	return (btih_helper(tree));
-}
-
-/**
  * btih_helper - checks if a binary tree is a valid Max Binary Heap
  * @tree: a pointer to the root node of the tree to check
  *
@@ -98,3 +83,19 @@ size_t binary_tree_size(const binary_tree_t *tree)
 	return (binary_tree_size(tree->left) +
 		binary_tree_size(tree->right) + 1);
 }
+
+/**
+ * binary_tree_is_heap - checks if a binary tree is a valid Max Binary Heap
+ * @tree: a pointer to the root node of the tree to check
+ *
+ * Return: 1 if tree is a valid Max Binary Heap
+ *         0 if tree is NULL
+ *         0 otherwise
+ */
+int binary_tree_is_heap(const binary_tree_t *tree)
+{
+	if (!tree)
+		return (0);
+	return (btih_helper(tree));
+}
+
